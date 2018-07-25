@@ -11,7 +11,7 @@ def readFromCSV(filePath):
     return data[1:]
 
 def main():
-    filePath = '2018-07-25-rivers_sections.csv'
+    filePath = 'river-data-csv'
     print(readFromCSV(filePath))
 
 main()
