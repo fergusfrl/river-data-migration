@@ -1,16 +1,17 @@
 import csv
 
-filePath = 'river-data.csv'
-data = []
+def readFromCSV(filePath):
+    data = []
 
-# Read from CSV
-with open(filePath) as csvDataFile:
-    csvReader = csv.reader(csvDataFile)
-    for row in csvReader:
-        data.append(row)
-    
-# Remove title line
-data = data[1:]
+    with open(filePath) as csvDataFile:
+        csvReader = csv.reader(csvDataFile)
+        for row in csvReader:
+            data.append(row)
+        
+    return data[1:]
 
-# Output data
-print(data)
+def main():
+    filePath = '2018-07-25-rivers_sections.csv'
+    print(readFromCSV(filePath))
+
+main()
